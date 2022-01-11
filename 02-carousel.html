@@ -8,7 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <title>Accordion Component</title>
+    <script defer src="carousel.js"></script>
+    <title>Carousel Component</title>
     <style>
       /*
           SPACING SYSTEM (px)
@@ -30,6 +31,9 @@
       }
 
       body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-family: "Inter", sans-serif;
         color: #343a40;
         line-height: 1;
@@ -44,11 +48,7 @@
         padding-right: 48px; */
         padding: 32px 40px 32px 86px;
         border-radius: 8px;
-
-        display: flex;
-        align-items: center;
-        gap: 86px;
-
+        height: 265px;
         position: relative;
       }
 
@@ -134,57 +134,111 @@
       .dot--fill {
         background-color: #087f5b;
       }
+
+      .slide {
+        display: flex;
+        align-items: center;
+        gap: 64px;
+        position: absolute;
+        margin-right: 24px;
+
+        transition: transform 1s;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .overflow-container {
+        width: 900px;
+        height: 500px;
+        overflow: hidden;
+      }
     </style>
   </head>
   <body>
-    <div class="carousel">
-      <img src="maria.jpg" alt="Maria de Almeida" />
-      <blockquote class="testimonial">
-        <p class="testimonial-text">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-          placeat, soluta doloremque maxime nemo corporis consequuntur ipsam?
-          Aspernatur exercitationem temporibus qui"
-        </p>
-        <p class="testimonial-author">Maria de Almeida</p>
-        <p class="testimonial-job">Senior Product Manager at EDP Comercial</p>
-      </blockquote>
-      <button class="btn btn--left">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="btn-icon"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
-      </button>
-      <button class="btn btn--right">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="btn-icon"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-      </button>
-      <div class="dots">
-        <button class="dot dot--fill">&nbsp;</button>
-        <button class="dot">&nbsp;</button>
-        <button class="dot">&nbsp;</button>
-        <button class="dot">&nbsp;</button>
+    <div class="overflow-container">
+      <div class="carousel">
+        <div class="slide">
+          <img src="maria.jpg" alt="Maria de Almeida" />
+          <blockquote class="testimonial">
+            <p class="testimonial-text">
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              placeat, soluta doloremque maxime nemo corporis consequuntur
+              ipsam? Aspernatur exercitationem temporibus qui"
+            </p>
+            <p class="testimonial-author">Maria de Almeida</p>
+            <p class="testimonial-job">
+              Senior Product Manager at EDP Comercial
+            </p>
+          </blockquote>
+        </div>
+        <div class="slide">
+          <img src="maria.jpg" alt="Maria de Almeida" />
+          <blockquote class="testimonial">
+            <p class="testimonial-text">
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              placeat, soluta doloremque maxime nemo corporis consequuntur
+              ipsam? Aspernatur exercitationem temporibus qui"
+            </p>
+            <p class="testimonial-author">Maria de Almeida</p>
+            <p class="testimonial-job">
+              Senior Product Manager at EDP Comercial
+            </p>
+          </blockquote>
+        </div>
+        <div class="slide">
+          <img src="maria.jpg" alt="Maria de Almeida" />
+          <blockquote class="testimonial">
+            <p class="testimonial-text">
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              placeat, soluta doloremque maxime nemo corporis consequuntur
+              ipsam? Aspernatur exercitationem temporibus qui"
+            </p>
+            <p class="testimonial-author">Maria de Almeida</p>
+            <p class="testimonial-job">
+              Senior Product Manager at EDP Comercial
+            </p>
+          </blockquote>
+        </div>
+        <button class="btn btn--left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="btn-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+        <button class="btn btn--right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="btn-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+        <div class="dots">
+          <button class="dot dot--fill">&nbsp;</button>
+          <button class="dot">&nbsp;</button>
+          <button class="dot">&nbsp;</button>
+          <button class="dot">&nbsp;</button>
+        </div>
       </div>
     </div>
   </body>
